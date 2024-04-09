@@ -33,7 +33,7 @@ if ($_POST) {
                 $nombreImagen = "$nombreAleatorio.$extension";
                 move_uploaded_file($archivo_tmp, "imagenes/$nombreImagen");
             }
-            //Elimina imagen anterior
+            //Elimina la imagen anterior
             if ($aClientes[$pos]["imagen"] != "" && file_exists("imagenes/".$aClientes[$pos]["imagen"])) {
                 unlink("imagenes/".$aClientes[$pos]["imagen"]);
             }
